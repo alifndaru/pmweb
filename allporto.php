@@ -13,6 +13,7 @@
   <body>
     <div class=" container mt-5">
       <a href="/AddPortoController.php"><button>add porto</button></a>
+      <a href="/Admin.php"><button>show contact</button></a>
     </div>
   <div class="container-fluid">
     <table class="table">
