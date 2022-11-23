@@ -36,6 +36,7 @@
     $title = $test['title'];
     $framework = $test['framework'];
     $foto = $test['foto'];
+    // var_dump($foto);
   ?>
   <div class="m-4 card">
     <div class="card-title">
@@ -46,6 +47,7 @@
     </div>
     <form action="/editPortoProses.php" method="POST" enctype="multipart/form-data" class="form">
       <div class="mb-3">
+        <!-- <input type="hidden" name="porto_id" value=""> -->
         <label for="" class="form-label">Title</label>
         <input type="text" name="title" class="form-control" value="<?=$title ?>">
       </div>
@@ -55,7 +57,12 @@
       </div>
       <div class="mb-3">
         <label class="form-label">Upload</label>
-        <input type="file" name="foto" class="form-control" name="foto">
+        <div class="img-thumbnail">
+          <img src="src="images/<?php echo $foto ?>">
+          </div>
+        <input type="file" name="foto" class="form-control" value="<?= $foto ?>" name="foto">
+        <input type="hidden" name="fotolama" class="form-control" value="<?= $foto ?>" name="foto">
+
       </div>
       <button type="submit" value="submit" class="btn btn-primary">Submit</button>
       <!-- <a href="/allporto.php"><button class="btn btn-primary">Back</button></a> -->
