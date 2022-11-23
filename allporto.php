@@ -28,14 +28,21 @@
       </thead>
       <tbody>
         <?php 
-          include "App/lib/config.php";
+          include "config.php";
           $items = mysqli_query($koneksi,"SELECT * FROM porto");
           $no = 1;
           while ($i = mysqli_fetch_array($items)) 
           {
         ?>
         <tr>
-          <td><img src="images/<?= $i['foto'];?>"></td>
+          <td><?=$no++; ?></td>
+          <td style="text-align: center;"><img src="images/<?php echo $i['foto']; ?>" style="width: 120px;"></td>
+          <td><?= $i['title']; ?></td>
+          <td><?= $i['framework']; ?></td>
+          <!-- <td><a href=""></a></td> -->
+          <td>
+            <a href="deletePorto.php?porto_id=<?=$i['porto_id']; ?>" onclick="return confirm('Anda yakin mau menghapus item ini ?')">Hapus</a> || <a href="editPorto.php?porto_id=<?=$i['porto_id']; ?>" onclick="return confirm('Anda yakin mau edit item ini ?')">edit</a>
+          </td>
         </tr>
          <!-- echo "<tr>";
           echo "<td>".$no++."</td>";          

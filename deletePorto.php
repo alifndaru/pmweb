@@ -1,5 +1,5 @@
 <?php 
-include "App/lib/config.php";
+include "config.php";
 
 
 ?>

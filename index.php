@@ -152,7 +152,7 @@
                 </ul>
               </div>
               <div class="form">
-                <form action="App/Http/contactController.php" method="POST">
+                <form action="/contactController.php" method="POST">
                   <label for="">Email</label>
                   <input type="email" name="email" require>
                   <label for="">Subject</label>

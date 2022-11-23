@@ -20,9 +20,9 @@
   
 
   <div class="m-4">
-    <a href="/App/Http/LogoutController.php"><button>logout</button></a>
+    <!-- <a href="/LogoutController.php"><button>logout</button></a> -->
     <a href="/allporto.php"><button>all porto</button></a>
-    <a href="/AddPortoController.php"><button>add porto</button></a>
+    <a href="/LogoutController.php" onclick="return confirm('Apakah anda yakin ingin keluar ?')"><button>logout</button></a>
   </div>
   <table class="table">
   <thead>
@@ -36,16 +36,17 @@
   </thead>
   <tbody>
     <?php 
-      include 'App/lib/config.php';
-      // $no = 1;
+      include 'config.php';
+      $no = 1;
       $items = mysqli_query($koneksi,"SELECT * FROM contact");
       while ($i = mysqli_fetch_array($items)) {
     echo "<tr>";
-      echo "<td>".$i['contact_id']."</td>";
+      // echo "<td>".$i['contact_id']."</td>";
+      echo "<td> ".$no++. "</td>";
       echo "<td>".$i['email']."</td>";
       echo "<td>".$i['subjek']."</td>";
       echo "<td>".$i['isi']."</td>";
-      echo "<td><a href='/App/Http/DeleteController.php?contact_id=$i[contact_id]'>hapus</a></td>";
+      echo "<td><a href='/DeleteController.php?contact_id=$i[contact_id];' onclick='return confirm('Anda yakin mau menghapus item ini ?')'>hapus</a></td>";
     echo "</tr>";
       }
     ?>

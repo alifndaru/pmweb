@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "App/lib/config.php";
+include "config.php";
 
 
 $email = $_POST['email'];
@@ -13,9 +13,9 @@ if($cek > 0){
 	$_SESSION['email'] = $email;
 	$_SESSION['status'] = "login";
 	// header("location:/resource/view/admin/index.php");
-  echo '<script>alert("anda berhasil login"); document.location="/resource/view/admin/index.php";</script>';
+  echo '<script>alert("anda berhasil login"); document.location="/Admin.php";</script>';
 }else{
-  echo '<script>alert("gagal login"); document.location="/resource/view/Auth.php"</script>';
+  echo '<script>alert("gagal login"); document.location="/Auth.php"</script>';
 	// header("location:index.php?pesan=gagal");
 }
 // if (mysqli_num_rows($query)>0) {
