@@ -13,7 +13,7 @@ $path = "images/".$fotobaru;
 // Proses upload
 
 if (move_uploaded_file($tmp, $path)) {
-  $query = "INSERT INTO porto(title, framework, foto) VALUES('$title', '$framework', '$foto' )";
+  $query = "INSERT INTO porto(title, framework, foto) VALUES('$title', '$framework', '$fotobaru' )";
   $result = mysqli_query($koneksi, $query);
   if ($result) {
     header("location:allporto.php");
