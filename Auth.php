@@ -11,7 +11,7 @@
   <!-- <h1>ini login admin</h1> -->
   <div class="kotak_login">
 		<p class="tulisan_login">Silahkan login</p>
-		<form action="/App/Http/AuthController.php" method="POST">
+		<form action="/AuthController.php" method="POST">
 			<label>Email</label>
 			<input type="text" name="email" class="form_login" placeholder="email .." required>
 			<label>Password</label>

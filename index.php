@@ -20,7 +20,7 @@
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="/resource/view/Auth.php">Login</a></li>
+          <li><a href="/Auth.php">Login</a></li>
         </ul>
       </nav>
       
